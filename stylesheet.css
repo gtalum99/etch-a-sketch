@@ -1,0 +1,12 @@
+#container {
+  display: grid;
+  height: 960px;
+  width: 960px;
+}
+
+.block {
+  border: 1px solid black;
+  min-width: 1px;
+  min-height: 1px;
+  display: inline-block;
+}
