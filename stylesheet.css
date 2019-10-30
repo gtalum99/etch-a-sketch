@@ -1,7 +1,28 @@
+body {
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+}
+
+#header {
+  color: white;
+  font-size: 24px;
+}
+
+#buttons {
+  margin-bottom: 50px;
+}
 #container {
   display: grid;
-  height: 960px;
-  width: 960px;
+  height: 640px;
+  width: 640px;
+  position: fixed;
+  left: 50%;
+  margin-left: -320px;
+  background-color: white;
+  border-color: red;
+  border-style: solid;
+  border-width: 20px;
+  border-radius: 25px;
 }
 
 .block {

@@ -1,14 +1,18 @@
 // set default variables and build reset button
-let container = document.querySelector('#container'); // container for grid
 let gridSize = 16; // default grid size
-let buttonContainer = document.querySelector('#buttons')
-let resetButton = document.createElement('button');
-let resetButtonText = document.createTextNode('Reset Grid');
+const container = document.querySelector('#container'); // container for grid
+const buttonContainer = document.querySelector('#buttons')
+const resetButton = document.createElement('button');
+const resetButtonText = document.createTextNode('Reset Grid');
 resetButton.appendChild(resetButtonText)
 buttonContainer.appendChild(resetButton)
 
 //add listener for reset button 
 resetButton.addEventListener('click', resetGrid)
+
+// call functions to build initial 16x16 grid and set listener
+buildGrid(gridSize)
+setListener()
 
 // create a div for each block (gridSize * gridSize)
 function makeDivs (gridSize) {
@@ -25,7 +29,7 @@ function makeGrid (gridSize) {
 };
 
 function buildGrid (gridSize){
-  // invoke makeDivs and MakeGrid functions to create initial 16 x 16 grid
+  // invoke makeDivs and MakeGrid functions to create grid
   makeDivs(gridSize);
   makeGrid(gridSize);
 };
@@ -56,9 +60,3 @@ function resetGrid() {
     buildGrid(gridSize);
     setListener()
 };
-
-// call functions to build grid and set listener
-buildGrid(gridSize)
-setListener()
-
-
