@@ -42,9 +42,7 @@ function draw(e) {
 // add listener for mouseover of grid squares, call draw function
 function setListener() {
   let touchSquare = document.querySelectorAll('.block');  
-  for (i=0; i<(gridSize*gridSize); i++) {
-    touchSquare[i].addEventListener('mouseover', draw);
-  };
+  touchSquare.forEach(touchSquare => touchSquare.addEventListener('mouseover', draw));
 };
 
 //clear grid on reset button press, create new grid of size of player's choice
